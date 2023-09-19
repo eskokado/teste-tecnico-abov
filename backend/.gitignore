@@ -231,3 +231,5 @@ jpm_tree/
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/janet,intellij+all,intellij,angular,visualstudiocode
+
+*.class

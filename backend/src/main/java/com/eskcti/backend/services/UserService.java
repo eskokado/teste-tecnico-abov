@@ -5,6 +5,7 @@ import com.eskcti.backend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @Service
@@ -16,9 +17,9 @@ public class UserService {
         return repository.save(user);
     }
 
-    public User update(User user) {
-        User userUpdate = repository.findById(user.getId())
-                .orElseThrow(() -> new RuntimeException("User not found"));
+    public User update(Long id, User user) {
+        User userUpdate = repository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("User not found"));
 
         userUpdate.setName(user.getName());
         userUpdate.setEmail(user.getEmail());
@@ -28,7 +29,7 @@ public class UserService {
 
     public User find(Long id) {
         return repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new EntityNotFoundException("User not found"));
     }
 
     public List<User> listAll() {
@@ -37,7 +38,7 @@ public class UserService {
 
     public void delete(Long id) {
         User user = repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new EntityNotFoundException("User not found"));
         repository.delete(user);
     }
 }

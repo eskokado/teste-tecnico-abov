@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "tab_restaurants")
+@Table(name = "tab_users")
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class User {

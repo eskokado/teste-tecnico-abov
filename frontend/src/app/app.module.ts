@@ -25,6 +25,10 @@ import { MatInputModule } from '@angular/material/input';
 import { HomeComponent } from './views/home/home.component';
 import { UserCrudComponent } from './views/user-crud/user-crud.component';
 import { UserCreateComponent } from './components/user/user-create/user-create.component';
+import { UserTableComponent } from './components/user/user-table/user-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,8 @@ import { UserCreateComponent } from './components/user/user-create/user-create.c
     NavComponent,
     HomeComponent,
     UserCrudComponent,
-    UserCreateComponent
+    UserCreateComponent,
+    UserTableComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +54,10 @@ import { UserCreateComponent } from './components/user/user-create/user-create.c
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

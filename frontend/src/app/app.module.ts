@@ -29,6 +29,7 @@ import { UserTableComponent } from './components/user/user-table/user-table.comp
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { UserUpdateComponent } from './components/user/user-update/user-update.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MatSortModule } from '@angular/material/sort';
     HomeComponent,
     UserCrudComponent,
     UserCreateComponent,
-    UserTableComponent
+    UserTableComponent,
+    UserUpdateComponent
   ],
   imports: [
     BrowserModule,

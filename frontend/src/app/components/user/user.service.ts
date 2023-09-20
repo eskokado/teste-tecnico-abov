@@ -31,4 +31,14 @@ export class UserService {
   list(): Observable<User[]> {
     return this.http.get<User[]>(this.baseUrl);
   }
+
+  findById(id: number | undefined): Observable<User> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<User>(url);
+  }
+
+  update(user: User): Observable<User> {
+    const url = `${this.baseUrl}/${user.id}`
+    return this.http.put<User>(url, user);
+  }
 }

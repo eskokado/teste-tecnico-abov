@@ -1,1 +1,25 @@
-<p>user-create works!</p>
+<mat-card>
+  <mat-card-title>Novo Usuário</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput placeholder='Nome' [(ngModel)]='user.name' name='name'>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder='Email' [(ngModel)]='user.email' name='email'>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder='Endereço' [(ngModel)]='user.address' name='address'>
+    </mat-form-field>
+  </form>
+  <div>
+    <button mat-raised-button (click)='createUser()' color='primary'>
+      Salvar
+    </button>
+    
+    <button mat-raised-button (click)='cancel()'>
+      Cancelar
+    </button>
+  </div>
+</mat-card>
+
+

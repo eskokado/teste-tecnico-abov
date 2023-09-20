@@ -233,3 +233,5 @@ jpm_tree/
 # End of https://www.toptal.com/developers/gitignore/api/janet,intellij+all,intellij,angular,visualstudiocode
 
 *.class
+
+target/classes/*
